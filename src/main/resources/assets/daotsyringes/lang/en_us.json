@@ -1,0 +1,15 @@
+{
+  "item.daotsyringes.ackerman_syringe": "§8§lAckerman Syringe",
+  "item.daotsyringes.attack_syringe": "§2§lAttack Titan Syringe",
+  "item.daotsyringes.armored_syringe": "§6§lArmored Titan Syringe",
+  "item.daotsyringes.beast_syringe": "§c§lBeast Titan Syringe",
+  "item.daotsyringes.cart_syringe": "§f§lCart Titan Syringe",
+  "item.daotsyringes.colossal_syringe": "§4§lColossal Titan Syringe",
+  "item.daotsyringes.female_syringe": "§d§lFemale Titan Syringe",
+  "item.daotsyringes.jaw_syringe": "§e§lJaw Titan Syringe",
+  "item.daotsyringes.warhammer_syringe": "§5§lWarhammer Titan Syringe",
+
+  "itemgroup.daotsyringes.syringes_items": "DAOT Syringes"
+
+
+}
