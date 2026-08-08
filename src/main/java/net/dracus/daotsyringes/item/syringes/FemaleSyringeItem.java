@@ -1,5 +1,6 @@
 package net.dracus.daotsyringes.item.syringes;
 
+import net.dracus.daotsyringes.config.ModGameRules;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
@@ -95,12 +96,22 @@ public class FemaleSyringeItem extends Item {
                     );
                 }
 
+                boolean announceSyringeUse = world.getGameRules().getBoolean(ModGameRules.ANNOUNCE_SYRINGE_USE);
+
                 //TO BE CHANGED PER TITAN
-                for (ServerPlayerEntity p : server.getPlayerManager().getPlayerList()) {
-                    p.sendMessage(
-                            Text.literal(playerName + " has claimed the power of the Female Titan!")
+                if (announceSyringeUse) {
+                    for (ServerPlayerEntity p : server.getPlayerManager().getPlayerList()) {
+                        p.sendMessage(
+                                Text.literal(playerName + " has claimed the power of the Female Titan!")
+                                        .formatted(Formatting.LIGHT_PURPLE, Formatting.BOLD)
+                        );
+                    }
+                } else {
+                    serverPlayer.sendMessage(
+                            Text.literal("You have claimed the power of the Female Titan")
                                     .formatted(Formatting.LIGHT_PURPLE, Formatting.BOLD)
                     );
+
                 }
             }
         }

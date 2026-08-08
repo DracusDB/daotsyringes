@@ -1,5 +1,6 @@
 package net.dracus.daotsyringes;
 
+import net.dracus.daotsyringes.config.ModGameRules;
 import net.dracus.daotsyringes.item.ModItemGroups;
 import net.dracus.daotsyringes.item.ModItems;
 import net.fabricmc.api.ModInitializer;
@@ -18,6 +19,8 @@ public class DAOTSyringes implements ModInitializer {
 	public void onInitialize() {
 		ModItemGroups.registerItemGroups();
 		ModItems.registerModItems();
+
+		ModGameRules.register();
 
 	}
 
